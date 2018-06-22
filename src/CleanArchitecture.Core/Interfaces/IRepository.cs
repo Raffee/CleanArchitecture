@@ -3,9 +3,9 @@ using CleanArchitecture.Core.SharedKernel;
 
 namespace CleanArchitecture.Core.Interfaces
 {
-    public interface IRepository<T> where T : BaseEntity
+    public interface IRepository<T, TId> where T : BaseEntity<TId>
     {
-        T GetById(int id);
+        T GetById(TId id);
         List<T> List();
         T Add(T entity);
         void Update(T entity);
