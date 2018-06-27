@@ -45,9 +45,6 @@ namespace CleanArchitecture.Core.Entities
         public decimal FitnessCoefficient { get; set; }
         public int SchoolId { get; set; }
 
-        public virtual decimal EvaluateFitness(ScheduleChromosome chromosome)
-        {
-            return 0;
-        }
+        public abstract decimal EvaluateFitness(ScheduleChromosome chromosome);
     }
 }

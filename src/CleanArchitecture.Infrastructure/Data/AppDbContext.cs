@@ -1,4 +1,5 @@
-﻿using CleanArchitecture.Core.Interfaces;
+﻿using System;
+using CleanArchitecture.Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using CleanArchitecture.Core.Entities;
@@ -16,14 +17,14 @@ namespace CleanArchitecture.Infrastructure.Data
             _dispatcher = dispatcher;
         }
 
-        public DbSet<ToDoItem> ToDoItems { get; set; }
+        //public DbSet<ToDoItem> ToDoItems { get; set; }
 
         public override int SaveChanges()
         {
             int result = base.SaveChanges();
 
             // dispatch events only if save was successful
-            var entitiesWithEvents = ChangeTracker.Entries<BaseEntity>()
+            var entitiesWithEvents = ChangeTracker.Entries<BaseEntity<Guid>>()
                 .Select(e => e.Entity)
                 .Where(e => e.Events.Any())
                 .ToArray();

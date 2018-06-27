@@ -45,7 +45,7 @@ namespace CleanArchitecture.Web
                 config.Scan(_ =>
                 {
                     _.AssemblyContainingType(typeof(Startup)); // Web
-                    _.AssemblyContainingType(typeof(BaseEntity)); // Core
+                    _.AssemblyContainingType(typeof(BaseEntity<>)); // Core
                     _.Assembly("CleanArchitecture.Infrastructure"); // Infrastructure
                     _.WithDefaultConventions();
                     _.ConnectImplementationsToTypesClosing(typeof(IHandle<>));
@@ -54,7 +54,7 @@ namespace CleanArchitecture.Web
                 // TODO: Add Registry Classes to eliminate reference to Infrastructure
 
                 // TODO: Move to Infrastucture Registry
-                config.For(typeof(IRepository<>)).Add(typeof(EfRepository<>));
+                config.For(typeof(IRepository<,>)).Add(typeof(EfRepository<,>));
 
                 //Populate the container using the service collection
                 config.Populate(services);

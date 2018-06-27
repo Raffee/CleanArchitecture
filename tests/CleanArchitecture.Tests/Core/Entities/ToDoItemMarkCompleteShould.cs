@@ -7,25 +7,25 @@ namespace CleanArchitecture.Tests.Core.Entities
 {
     public class ToDoItemMarkCompleteShould
     {
-        [Fact]
-        public void SetIsDoneToTrue()
-        {
-            var item = new ToDoItem();
+        //[Fact]
+        //public void SetIsDoneToTrue()
+        //{
+        //    var item = new ToDoItem();
 
-            item.MarkComplete();
+        //    item.MarkComplete();
 
-            Assert.True(item.IsDone);
-        }
+        //    Assert.True(item.IsDone);
+        //}
 
-        [Fact]
-        public void RaiseToDoItemCompletedEvent()
-        {
-            var item = new ToDoItem();
+        //[Fact]
+        //public void RaiseToDoItemCompletedEvent()
+        //{
+        //    var item = new ToDoItem();
 
-            item.MarkComplete();
+        //    item.MarkComplete();
 
-            Assert.Single(item.Events);
-            Assert.IsType<ToDoItemCompletedEvent>(item.Events.First());
-        }
+        //    Assert.Single(item.Events);
+        //    Assert.IsType<ToDoItemCompletedEvent>(item.Events.First());
+        //}
     }
 }

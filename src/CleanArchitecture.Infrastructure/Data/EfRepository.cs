@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.Infrastructure.Data
 {
-    public class EfRepository<T> : IRepository<T> where T : BaseEntity
+    public class EfRepository<T, TId> : IRepository<T, TId> where T : BaseEntity<TId>
     {
         private readonly AppDbContext _dbContext;
 
@@ -15,9 +15,9 @@ namespace CleanArchitecture.Infrastructure.Data
             _dbContext = dbContext;
         }
 
-        public T GetById(int id)
+        public T GetById(TId id)
         {
-            return _dbContext.Set<T>().SingleOrDefault(e => e.Id == id);
+            return _dbContext.Set<T>().SingleOrDefault(e => e.Id.Equals(id));
         }
 
         public List<T> List()

@@ -1,0 +1,115 @@
+﻿@model CleanArchitecture.Core.Entities.CountBasedRule
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>CountBasedRule</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Day" class="control-label"></label>
+                <input asp-for="Day" class="form-control" />
+                <span asp-validation-for="Day" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CriteriaValue" class="control-label"></label>
+                <input asp-for="CriteriaValue" class="form-control" />
+                <span asp-validation-for="CriteriaValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountType" class="control-label"></label>
+                <input asp-for="CountType" class="form-control" />
+                <span asp-validation-for="CountType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountCriteria" class="control-label"></label>
+                <input asp-for="CountCriteria" class="form-control" />
+                <span asp-validation-for="CountCriteria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OccuranceType" class="control-label"></label>
+                <input asp-for="OccuranceType" class="form-control" />
+                <span asp-validation-for="OccuranceType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OccuranceCount" class="control-label"></label>
+                <input asp-for="OccuranceCount" class="form-control" />
+                <span asp-validation-for="OccuranceCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RuleType" class="control-label"></label>
+                <input asp-for="RuleType" class="form-control" />
+                <span asp-validation-for="RuleType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RuleObjectType" class="control-label"></label>
+                <input asp-for="RuleObjectType" class="form-control" />
+                <span asp-validation-for="RuleObjectType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RuleObjectId" class="control-label"></label>
+                <input asp-for="RuleObjectId" class="form-control" />
+                <span asp-validation-for="RuleObjectId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Teacher" class="control-label"></label>
+                <input asp-for="Teacher" class="form-control" />
+                <span asp-validation-for="Teacher" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course" class="control-label"></label>
+                <input asp-for="Course" class="form-control" />
+                <span asp-validation-for="Course" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Department" class="control-label"></label>
+                <input asp-for="Department" class="form-control" />
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassLevel" class="control-label"></label>
+                <input asp-for="ClassLevel" class="form-control" />
+                <span asp-validation-for="ClassLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class" class="control-label"></label>
+                <input asp-for="Class" class="form-control" />
+                <span asp-validation-for="Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Priority" class="control-label"></label>
+                <input asp-for="Priority" class="form-control" />
+                <span asp-validation-for="Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FitnessCoefficient" class="control-label"></label>
+                <input asp-for="FitnessCoefficient" class="form-control" />
+                <span asp-validation-for="FitnessCoefficient" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SchoolId" class="control-label"></label>
+                <input asp-for="SchoolId" class="form-control" />
+                <span asp-validation-for="SchoolId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
